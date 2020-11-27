@@ -11,7 +11,7 @@ def UploadAction(event=None):
     text = pytesseract.image_to_string(im, lang='eng')
     next
     a=simpledialog.askstring(title="File Name",prompt="Save file name as \n")+".txt"
-    f = open('/home'+a, "w")
+    f = open(a, "w")
     f.write(text)
     f.close()
 
